@@ -27,7 +27,7 @@ export default function CharacterList(props) {
     
       <h2>Characters</h2>
       {character.map(character => {
-        return <CharacterCard character={character} />;
+        return <CharacterCard key={character.name} character={character} />;
       })}
     </section>
   );
