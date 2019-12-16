@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 
 export default function SearchForm() {
   const [search, setSearch] = useState("");
 
   const handleChange = event => {
-    setSearch(event.target.value);
+    setSearch(event.target.value)
   }
 
   return (

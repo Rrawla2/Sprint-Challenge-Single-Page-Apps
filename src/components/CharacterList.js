@@ -5,12 +5,13 @@ import SearchForm from "./SearchForm";
 
 export default function CharacterList(props) {
   const [character, setCharacter] = useState([]);
+  
   const [search, setSearch] = useState("");
   
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
-    const url="https://rick-api.herokuapp.com/api/";
+    const url="https://rickandmortyapi.com/api/character/";
 
     axios
       .get(url)
@@ -31,10 +32,14 @@ export default function CharacterList(props) {
       <SearchForm />
       <h2>Characters</h2>
 
-      {character.filter(item => item.character.toLowerCase().includes(search.toLowerCase()))
+      {character.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
       .map(character => 
-        <CharacterCard character={character} />
+      <div>
+        <CharacterCard key={character.id} character={character} />
+        
+      </div>
       )};
+      
       
     </section>
   );
