@@ -3,11 +3,9 @@ import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
 
-export default function CharacterList(props) {
+export default function CharacterList() {
   const [character, setCharacter] = useState([]);
-  
   const [search, setSearch] = useState("");
-  
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
@@ -16,8 +14,9 @@ export default function CharacterList(props) {
     axios
       .get(url)
       .then(response => {
-        console.log(response.data.results)
+        // console.log(response.data.results)
         setCharacter(response.data.results);
+        console.log("setCharacter", setCharacter)
       })
       .catch(error => {
         console.log('Data not found', error);
@@ -25,22 +24,20 @@ export default function CharacterList(props) {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
-
+  console.log("character", character)
+  
   return (
     
     <section className="character-list">
-      <SearchForm />
-      <h2>Characters</h2>
+      <h2>Search Characters</h2>
+      <SearchForm setSearch={setSearch} />
 
       {character.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
       .map(character => 
-      <div>
         <CharacterCard key={character.id} character={character} />
-        
-      </div>
       )};
       
-      
+    
     </section>
   );
 }

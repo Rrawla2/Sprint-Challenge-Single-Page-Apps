@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
 
-export default function SearchForm() {
-  const [search, setSearch] = useState("");
-
+export default function SearchForm(props) {
+  
   const handleChange = event => {
-    setSearch(event.target.value)
+    props.setSearch(event.target.value)
+    
+  }
+  const onSubmit = event => {
+    event.preventDefault()
   }
 
   return (
     <section className="search-form">
-     <form>
+     <form onSubmit={onSubmit}>
        <input
-       name="name"
-       type="text"
+       name="search"
        placeholder="Search"
        onChange={handleChange}
        />
