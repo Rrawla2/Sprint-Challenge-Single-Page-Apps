@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Some of the benefits to using client-side routing is a faster web application, since only changed data is re-rendered instead of everything on the page and it eliminates the visual disturbances of refreshing the entire page.
 
 ## Project Set Up
 
@@ -38,7 +38,7 @@ Follow these steps to set up and work on your project:
 - [X]  Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [X]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
 - [X]  Implement the project on this branch, committing changes regularly.
-- [ ]  Push commits: `git push origin <firstName-lastName>`.
+- [X]  Push commits: `git push origin <firstName-lastName>`.
 - [X]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
 - [X]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
 - [X]  **RUN** `yarn start` or `npm start` to fire up your React application.
@@ -74,8 +74,8 @@ _Add a Router to this application using [React Router](https://reacttraining.com
 
 _Add 'Search by Name' feature._
 
-- [ ]  Add the `<SearchForm />` component (see `./components/SearchForm.js`).
-- [ ]  Create a search form that will filter through the data displayed in the character list.
+- [X]  Add the `<SearchForm />` component (see `./components/SearchForm.js`).
+- [X]  Create a search form that will filter through the data displayed in the character list.
 
 ### **Required best practices:**
 
