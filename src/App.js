@@ -14,7 +14,7 @@ export default function App() {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/characterlist">Character List</NavLink>
       </Nav>
-      <SearchForm />
+      
 
       <Route exact path="/" component={WelcomePage} />
       <Route path="/characterlist" component={CharacterList} />
