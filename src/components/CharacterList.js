@@ -26,14 +26,15 @@ export default function CharacterList(props) {
   }, []);
 
   return (
+    
     <section className="character-list">
       <SearchForm />
       <h2>Characters</h2>
 
       {character.filter(item => item.character.toLowerCase().includes(search.toLowerCase()))
-      .map(character => {
-        <CharacterCard  character={character} />
-      })};
+      .map(character => 
+        <CharacterCard character={character} />
+      )};
       
     </section>
   );

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { character } from "./CharacterList";
+
 
 export default function SearchForm() {
   const [search, setSearch] = useState("");
-  
+
   const handleChange = event => {
     setSearch(event.target.value);
   }
