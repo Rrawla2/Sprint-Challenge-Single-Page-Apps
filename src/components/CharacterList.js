@@ -10,7 +10,7 @@ export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
-    const url="https://rickandmortyapi.com/api/character/";
+    const url="https://rick-api.herokuapp.com/api/";
 
     axios
       .get(url)
@@ -25,20 +25,18 @@ export default function CharacterList(props) {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
-
-    
-
-  
-
   return (
     <section className="character-list">
-      
-      <h2>Characters</h2>
       <SearchForm />
+      <h2>Characters</h2>
+      
+      
       {character.filter(item => item.character.toLowerCase().includes(search).toLowerCase())
       .map(character => {
-      <CharacterCard key={character.name} character={character} />
-      })}
+        
+        <CharacterCard  character={character} />
+      
+      })};
       
     </section>
   );
