@@ -12,7 +12,50 @@ main {
   background: #fff;
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  text-align: center;
 }
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  
+  border: 1px solid black;
+  background: lightblue;
+  border-radius: 10px;
+  color: black;
+  width: 40%;
+  max-height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+  padding-top: auto;
+  cursor: pointer;
+  box-shadow: 0px 1px 6px -2px grey;
+}
+
+.name {
+  font-size: 1.5em;
+  background: rgb(114, 180, 247);
+  border: 1px solid black;
+  padding: 10px;
+  margin-right: auto;
+  border-radius: 10px;
+  ;
+  
+}
+
+.cardimg {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto;
+}
+
 
 .grid-view {
   display: flex;
