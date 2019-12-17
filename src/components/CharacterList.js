@@ -24,7 +24,7 @@ export default function CharacterList() {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
-  console.log("character", character)
+  //console.log("character", character)
   
   return (
     
